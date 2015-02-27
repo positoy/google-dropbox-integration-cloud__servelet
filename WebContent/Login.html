@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="euc-kr" />
+
+<title>뭉게구름</title>
+<link rel="stylesheet" type="text/css" href="CSS/login.css" />
+<link rel="stylesheet" type="text/css" href="CSS/animation.css" />
+<link rel="stylesheet" type="text/css" href="CSS/play.css" />
+<script charset="euc-kr" type="text/javascript" src="Js/RegisterJS.js"></script>
+</head>
+<body style="background-image: url('Images/beige_paper.png');">
+	<div class="container">
+		<section>
+			<div id="container">
+				<a class="hiddenanchor" id="toregister"></a> 
+				<a class="hiddenanchor" id="tologin"></a>
+				<div id="wrapper">
+					<div id="login" class="animate form">
+						<form id="loginForm" action="LoginServlet" method="post" autocomplete="on">
+							<h1>Log in</h1>
+							<p>
+								<label for="username" class="uname"> Your email or username </label> 
+								<input id="username" name="id" required="required" type="text" placeholder="username" />
+							</p>
+							<p>
+								<label for="password" class="youpasswd">Your password </label> 
+								<input id="password" name="passwd" required="required" type="password" placeholder="eg) 1q2w3e4r5t" />
+							</p>
+							
+							<p class="login button">
+								<input type="submit" value="Login" />
+							</p>
+							<p class="change_link">Not a member yet ? 
+								<a href="#toregister" class="to_register">Join us</a>
+							</p>
+						</form>
+					</div>
+
+					<div id="register" class="animate form">
+						<form id="registerForm" action="RegisterServlet" method="post">
+							<h1>Sign up</h1>
+							<p>
+								<label for="usernamesignup" class="uname">Your username</label> 
+								<input id="usernamesignup" name="usernamesignup" required="required" type="text" placeholder="nth1679" />
+							</p>
+							<p>
+								<label for="emailsignup" class="youmail">Your email</label> 
+								<input id="emailsignup" name="emailsignup" type="email" required="required" placeholder="nth1679@ajou.ac.kr" />
+							</p>
+							<p>
+								<label for="passwordsignup" class="youpasswd">Your password </label>
+								<input id="passwordsignup" name="passwordsignup" type="password"  required="required" placeholder="eg) 1q2w3e4r5t" />
+							</p>
+							<p>
+								<label for="passwordsignup_confirm" class="youpasswd">Please confirm your password </label>
+								<input id="passwordsignup_confirm" name="passwordsignup_confirm" required="required" type="password" placeholder="eg) 1q2w3e4r5t" />
+							</p>
+							<p>
+								<label for="registerDrive" class="uname">Register Cloud Service </label> 
+							</p>
+							<label for="registerDrive" class="uname">Google Drive</label>
+							<input id="registerDriveGoogle" name="registerDriveGoogle" type="checkbox" value="1" />
+							<label for="registerDrive" class="uname">Dropbox </label>
+							<input id="registerDriveDropbox" name="registerDriveDropbox" type="checkbox" value="1" />
+							<p class="signin button">
+								<input type="submit" value="Sign up" onclick="OnBtnSignUpClicked()"/>
+							</p>
+							<p class="change_link">Already a member ? 
+								<a href="#tologin" class="to_register">Go and log in </a>
+							</p>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+</body>
+
+</html>
